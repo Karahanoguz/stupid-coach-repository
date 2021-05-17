@@ -1,4 +1,6 @@
-<p><%= @blank %></p>
-<p><%= @question %></p>
+<% if @question == "" %>
+<% else  %>
+  <p>You asked: <%= @question %> </p>
+<% end %>
 <p><%= @answer %></p>
 <%= link_to "Ask again", ask_path %>
